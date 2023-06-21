@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/add_movie.css">
+</head>
+<body>
+    
+    <div class="main">
+        <div class="box">
+            <a href="/">viewMovie</a>
+            <form action="/addDetail" method="post" enctype="multipart/form-data">
+                <div class="inner">
+                    <div class="w-50 f-s">
+                        <label for="poster">Poster</label>
+                        <input type="file" name="image">
+                        <br>
+                    
+                        <label for="title">Movie Title</label>
+                        <input type="text" name="title" placeholder="Enter movie title">
+                        <br>
+                    
+                        <label for="date">Release Date</label>
+                        <input type="date" name="date">
+                        <br>
+                    
+                        <label for="plot">Movie Plot</label>
+                        <textarea name="plot" cols="20" rows="2" placeholder="Enter movie plot"></textarea>
+                        <br>
+                    
+                        <label for="language">Movie Language</label>
+                        <input type="checkbox" value="Hindi" name="language[]">Hindi
+                        <input type="checkbox" value="Gujrati" name="language[]">Gujrati
+                        <input type="checkbox" value="Engish" name="language[]">Engish
+                        <input type="checkbox" value="Telugu" name="language[]">Telugu
+                        <br>
+
+                        <label for="budget">Movie Budget</label>
+                        <input type="text" name="budget" placeholder="Enter movie budget">
+                        <br>
+                        
+                    </div>
+                    <div class="w-50 sec">
+    
+                        <label for="genre">Genre</label>
+                        <input type="checkbox" name="genre[]" value="Sci-fi">Sci-fi
+                        <input type="checkbox" name="genre[]" value="Comedy">Comedy
+                        <input type="checkbox" name="genre[]" value="Drama">Drama
+                        <input type="checkbox" name="genre[]" value="Horror">Horror
+                        <input type="checkbox" name="genre[]" value="Lovestory">Lovestory
+                        <input type="checkbox" name="genre[]" value="Thriller">Thriller
+                        <input type="checkbox" name="genre[]" value="Adventure">Adventure
+                        <input type="checkbox" name="genre[]" value="Crime">Crime
+                        <br>
+    
+                        <label for="duration">Movie Time Duration</label>
+                        <input type="text" name="duration" placeholder="Enter movie time duration">
+                        <br>
+                    
+                        <label for="director">Movie Director</label>
+                        <input type="text" name="director" placeholder="Enter movie director">
+                        <br>
+            
+                        <label for="cast">Movie Cast</label>
+                        <textarea name="cast" cols="20" rows="2" placeholder="Enter movie cast"></textarea>
+                        <br>
+                    
+                        <label for="rating">Rating</label>
+                        <% var rating = ["1","2","3","4","5","6","7","8","9","10"] %>
+                        <select name="rating">
+                            <option value="">--Select Rating---</option>
+                            <% rating.map((v,i)=>{ %>
+                                <option value="<%= v %>"><%= v %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" value="submit" class="btn">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

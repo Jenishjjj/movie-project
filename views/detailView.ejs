@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/detailView.css">
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="img">
+                <img src="<%=data.image%>" width="100%" height="650">
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <div>
+                        <h1><%= data.title %></h1>
+                    </div>
+                    <div>
+                        <h2><%=data.rating%></h2>
+                    </div>
+                </div>
+                <p><%=data.director%></p>
+                <p><%= data.plot %></p>
+                <p>Casts : <span><%=data.cast%></span></p>
+                <p>Release Date : <span><%=data.date%></span></p>
+                <p>Language : <span><%=data.language %></span></p>
+                <p>Movie Budget : <span><%=data.budget%></span></p>
+                <p>Genre : <span><%=data.genre%></span></p>
+                <p>Time Duration : <span><%=data.duration%></span></p>
+                
+                <a href="/viewMovie">Add Details</a>
+                <a href="/">View Movie</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
